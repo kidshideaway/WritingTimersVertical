@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/alarm-bell.wav-76751087983919cb036a96abf02efeaa.sample"
+
+[deps]
+
+source_file="res://Resources/audio/alarm-bell.wav"
+dest_files=[ "res://.import/alarm-bell.wav-76751087983919cb036a96abf02efeaa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
