@@ -16,17 +16,26 @@ _global_script_class_icons={
 [application]
 
 config/name="Writing Timers Vertical"
-run/main_scene="res://Resources/Scenes/Node2D.tscn"
+run/main_scene="res://Resources/Scenes/TimerApp.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Resources/Scripts/Global.gd"
+TimerApp="*res://Resources/Scripts/TimerApp.gd"
+GameMenu="*res://Resources/Scripts/GameMenu.gd"
+Buttons="*res://Resources/Scripts/Buttons.gd"
 
 [display]
 
-window/size/fullscreen=true
-window/size/test_width=600
-window/size/test_height=600
+window/size/test_width=1024
+window/size/test_height=1024
+
+[global]
+
+network=false
+multiplayer=false
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
-environment/default_environment="res://default_env.tres"

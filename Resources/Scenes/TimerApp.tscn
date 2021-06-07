@@ -1,0 +1,323 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Resources/Images/background_image.jpg" type="Texture" id=1]
+[ext_resource path="res://Resources/Images/timer_floating_background_smaller.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Images/gear1.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Scripts/TextureButtons.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Scripts/Buttons.gd" type="Script" id=5]
+[ext_resource path="res://Resources/audio/alarm-bell.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+antialiased = false
+hinting = 0
+font_path = "res://Resources/Fonts/kirifont/KiriFont.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+extra_spacing_top = 1
+extra_spacing_bottom = 1
+extra_spacing_char = 1
+extra_spacing_space = 1
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 24
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 24
+font_data = SubResource( 11 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 24
+font_data = SubResource( 13 )
+
+[sub_resource type="DynamicFontData" id=15]
+font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+
+[sub_resource type="DynamicFont" id=16]
+size = 24
+font_data = SubResource( 15 )
+
+[sub_resource type="DynamicFontData" id=17]
+font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+
+[sub_resource type="DynamicFont" id=18]
+size = 24
+font_data = SubResource( 17 )
+
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 24
+font_data = SubResource( 19 )
+
+[node name="TimerNode" type="Node2D"]
+
+[node name="Viewport_Container" type="ViewportContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 1024, 720 )
+
+[node name="Viewport_Main" type="Viewport" parent="Viewport_Container"]
+size = Vector2( 1024, 720 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="MeshInstance" type="MeshInstance" parent="Viewport_Container/Viewport_Main"]
+
+[node name="Camera" type="Camera" parent="Viewport_Container/Viewport_Main"]
+current = true
+
+[node name="BG_Image" type="NinePatchRect" parent="Viewport_Container/Viewport_Main"]
+margin_right = 3264.0
+margin_bottom = 2448.0
+rect_min_size = Vector2( 1024, 720 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerFrame_Image" type="TextureRect" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 501.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 451, 160 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TimerFrame_Image"]
+margin_left = 2.0
+margin_top = 3.0
+margin_right = 427.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 425, 125 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 50, 125 )
+custom_fonts/normal_font = SubResource( 2 )
+tab_size = 2
+text = " "
+scroll_active = false
+
+[node name="RTL_MINUTES" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+margin_left = 54.0
+margin_right = 179.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+custom_fonts/normal_font = SubResource( 2 )
+visible_characters = 3
+tab_size = 3
+text = "05"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+margin_left = 183.0
+margin_right = 228.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 45, 125 )
+custom_fonts/normal_font = SubResource( 2 )
+visible_characters = 1
+tab_size = 1
+text = ":"
+scroll_active = false
+
+[node name="RTL_SECONDS" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+margin_left = 232.0
+margin_right = 367.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 135, 125 )
+custom_fonts/normal_font = SubResource( 2 )
+visible_characters = 2
+tab_size = 2
+text = "00"
+scroll_active = false
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+margin_left = 371.0
+margin_right = 421.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 50, 125 )
+custom_fonts/normal_font = SubResource( 2 )
+tab_size = 2
+scroll_active = false
+
+[node name="SettingsButton" type="TextureButton" parent="TimerFrame_Image"]
+margin_left = 398.0
+margin_top = 108.0
+margin_right = 448.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="GameMenu_Control" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 1024, 720 )
+
+[node name="GameMenu_Image" type="TextureRect" parent="GameMenu_Control"]
+margin_right = 1024.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 1024, 720 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background_Image2" type="NinePatchRect" parent="GameMenu_Control/GameMenu_Image"]
+margin_right = 1024.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 1024, 720 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu_Control/GameMenu_Image"]
+margin_left = 20.0
+margin_right = 320.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 300, 420 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu_Control/GameMenu_Image/HBoxContainer"]
+margin_right = 300.0
+margin_bottom = 444.0
+rect_min_size = Vector2( 300, 420 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 300, 100 )
+custom_fonts/normal_font = SubResource( 4 )
+visible_characters = 10
+meta_underlined = false
+tab_size = 10
+text = " TIMER"
+scroll_active = false
+
+[node name="Minutes_5_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 300.0
+margin_bottom = 143.0
+rect_min_size = Vector2( 300, 25 )
+custom_fonts/font = SubResource( 6 )
+action_mode = 0
+text = "5 Minutes"
+script = ExtResource( 5 )
+
+[node name="Minutes_10_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_top = 147.0
+margin_right = 300.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 300, 20 )
+custom_fonts/font = SubResource( 8 )
+text = "10 Minutes"
+script = ExtResource( 5 )
+
+[node name="Minutes_15_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_top = 190.0
+margin_right = 300.0
+margin_bottom = 229.0
+custom_fonts/font = SubResource( 10 )
+text = "15 Minutes"
+script = ExtResource( 5 )
+
+[node name="Minutes_20_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_top = 233.0
+margin_right = 300.0
+margin_bottom = 272.0
+custom_fonts/font = SubResource( 12 )
+text = "20 Minutes"
+script = ExtResource( 5 )
+
+[node name="Minutes_30_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_top = 276.0
+margin_right = 300.0
+margin_bottom = 315.0
+custom_fonts/font = SubResource( 14 )
+text = "30 Minutes"
+script = ExtResource( 5 )
+
+[node name="Minutes_45_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_top = 319.0
+margin_right = 300.0
+margin_bottom = 358.0
+custom_fonts/font = SubResource( 16 )
+text = "45 Minutes"
+script = ExtResource( 5 )
+
+[node name="Minutes_60_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_top = 362.0
+margin_right = 300.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 18 )
+text = "60 Minutes"
+script = ExtResource( 5 )
+
+[node name="Quit_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+margin_top = 405.0
+margin_right = 300.0
+margin_bottom = 444.0
+rect_min_size = Vector2( 0, 39 )
+custom_fonts/font = SubResource( 20 )
+text = "Quit"
+script = ExtResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+[connection signal="pressed" from="TimerFrame_Image/SettingsButton" to="TimerFrame_Image/SettingsButton" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_5_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_5_Button" method="_on_Minutes_5_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_10_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_10_Button" method="_on_Minutes_10_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_15_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_15_Button" method="_on_Minutes_15_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_20_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_20_Button" method="_on_Minutes_20_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_30_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_30_Button" method="_on_Minutes_30_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_45_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_45_Button" method="_on_Minutes_45_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_60_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_60_Button" method="_on_Minutes_60_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Quit_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Quit_Button" method="_on_QuitButton_pressed"]
