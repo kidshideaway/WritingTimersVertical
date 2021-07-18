@@ -3,22 +3,24 @@ extends Control
 func _ready(): 
 	pass  
  
-func make_visible():
-	print ("Menu (self): ", self) 
-	self.show();
-	print ("Menu (Global): ", Global.GetGameMenuControl )  
+func make_visible(): 
+	self.show();  
 	Global.GetGameMenuControl.show();	
-	var check = self.check_visiblity(); 
-	print ("make_visible check (self): ", check) 
+	var check = self.check_visiblity(); 	
+	if Global.debug > 0:
+		print ("Menu (self): ", self) 
+		print ("Menu (Global): ", Global.GetGameMenuControl )  
+		print ("make_visible check (self): ", check) 
 	pass 
 	
-func make_invisible(): 
-	print ("Menu (self): ", self) 
-	self.hide();	
-	print ("Menu (Global): ", Global.GetGameMenuControl ) 
+func make_invisible():  
+	self.hide();	 
 	Global.GetGameMenuControl.hide();	
 	var check = self.check_visiblity(); 
-	print ("make_invisible check (self): ", check) 
+	if Global.debug > 0:
+		print ("Menu (self): ", self) 
+		print ("Menu (Global): ", Global.GetGameMenuControl ) 
+		print ("make_invisible check (self): ", check) 
 	pass  
 	
 func check_visiblity():
