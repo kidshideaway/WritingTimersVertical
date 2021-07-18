@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Resources/Scripts/ParallaxBackground.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Images/timer_bg_layer_01_floating_background.png" type="Texture" id=2]
@@ -11,85 +11,81 @@
 [ext_resource path="res://Resources/Scripts/Buttons.gd" type="Script" id=9]
 [ext_resource path="res://Resources/audio/alarm-bell.wav" type="AudioStream" id=10]
 
-[sub_resource type="DynamicFontData" id=6]
+[sub_resource type="DynamicFontData" id=1]
 font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=2]
 size = 100
-font_data = SubResource( 6 )
+font_data = SubResource( 1 )
 
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/timer_bg_layer_01_floating_background.png-d732230ca700176fe7bbab3bb8f4b26b.stex"
-
-[sub_resource type="DynamicFontData" id=9]
+[sub_resource type="DynamicFontData" id=4]
 antialiased = false
 hinting = 0
-font_path = "res://Resources/Fonts/kirifont/KiriFont.ttf"
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=5]
 size = 60
 extra_spacing_top = 1
 extra_spacing_bottom = 1
 extra_spacing_char = 1
 extra_spacing_space = 1
-font_data = SubResource( 9 )
+font_data = SubResource( 4 )
 
-[sub_resource type="DynamicFontData" id=11]
-font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=7]
 size = 24
-font_data = SubResource( 11 )
+font_data = SubResource( 6 )
 
-[sub_resource type="DynamicFontData" id=13]
-font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=9]
 size = 24
-font_data = SubResource( 13 )
+font_data = SubResource( 8 )
 
-[sub_resource type="DynamicFontData" id=15]
-font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=11]
 size = 24
-font_data = SubResource( 15 )
+font_data = SubResource( 10 )
 
-[sub_resource type="DynamicFontData" id=17]
-font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="DynamicFont" id=13]
 size = 24
-font_data = SubResource( 17 )
+font_data = SubResource( 12 )
 
-[sub_resource type="DynamicFontData" id=19]
-font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+[sub_resource type="DynamicFontData" id=14]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=20]
+[sub_resource type="DynamicFont" id=15]
 size = 24
-font_data = SubResource( 19 )
+font_data = SubResource( 14 )
 
-[sub_resource type="DynamicFontData" id=21]
-font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+[sub_resource type="DynamicFontData" id=16]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=17]
 size = 24
-font_data = SubResource( 21 )
+font_data = SubResource( 16 )
 
-[sub_resource type="DynamicFontData" id=23]
-font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+[sub_resource type="DynamicFontData" id=18]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=24]
+[sub_resource type="DynamicFont" id=19]
 size = 24
-font_data = SubResource( 23 )
+font_data = SubResource( 18 )
 
-[sub_resource type="DynamicFontData" id=25]
-font_path = "res://Resources/Fonts/cmu-typewriter/Typewriter/cmuntb.ttf"
+[sub_resource type="DynamicFontData" id=20]
+font_path = "res://Resources/Fonts/volkhorn/VollkornBlack-gx2EE.otf"
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="DynamicFont" id=21]
 size = 24
-font_data = SubResource( 25 )
+font_data = SubResource( 20 )
 
 [node name="TimerNode" type="Node2D"]
 
@@ -149,7 +145,11 @@ render_target_update_mode = 0
 [node name="Camera" type="Camera" parent="Viewport_Container/Viewport_Main"]
 current = true
 
-[node name="TimerFrame_Image" type="TextureRect" parent="."]
+[node name="Timer_Control" type="Control" parent="."]
+margin_right = 1028.0
+margin_bottom = 600.0
+
+[node name="TimerFrame_Image" type="TextureRect" parent="Timer_Control"]
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 501.0
@@ -160,7 +160,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TimerFrame_Image"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Timer_Control/TimerFrame_Image"]
 margin_left = 2.0
 margin_top = 3.0
 margin_right = 427.0
@@ -170,58 +170,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+[node name="RichTextLabel4" type="RichTextLabel" parent="Timer_Control/TimerFrame_Image/HBoxContainer"]
 margin_right = 50.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 50, 125 )
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 2 )
 tab_size = 2
 text = " "
 scroll_active = false
 
-[node name="RTL_MINUTES" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+[node name="RTL_MINUTES" type="RichTextLabel" parent="Timer_Control/TimerFrame_Image/HBoxContainer"]
 margin_left = 54.0
 margin_right = 179.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 125, 125 )
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 2 )
 visible_characters = 3
 tab_size = 3
 text = "05"
 scroll_active = false
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Timer_Control/TimerFrame_Image/HBoxContainer"]
 margin_left = 183.0
 margin_right = 228.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 45, 125 )
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 2 )
 visible_characters = 1
 tab_size = 1
 text = ":"
 scroll_active = false
 
-[node name="RTL_SECONDS" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+[node name="RTL_SECONDS" type="RichTextLabel" parent="Timer_Control/TimerFrame_Image/HBoxContainer"]
 margin_left = 232.0
 margin_right = 367.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 135, 125 )
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 2 )
 visible_characters = 2
 tab_size = 2
 text = "00"
 scroll_active = false
 
-[node name="RichTextLabel5" type="RichTextLabel" parent="TimerFrame_Image/HBoxContainer"]
+[node name="RichTextLabel5" type="RichTextLabel" parent="Timer_Control/TimerFrame_Image/HBoxContainer"]
 margin_left = 371.0
 margin_right = 421.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 50, 125 )
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 2 )
 tab_size = 2
 scroll_active = false
 
-[node name="SettingsButton" type="TextureButton" parent="TimerFrame_Image"]
+[node name="SettingsButton" type="TextureButton" parent="Timer_Control/TimerFrame_Image"]
 margin_left = 398.0
 margin_top = 108.0
 margin_right = 448.0
@@ -236,16 +236,7 @@ margin_right = 1024.0
 margin_bottom = 720.0
 rect_min_size = Vector2( 1024, 720 )
 
-[node name="GameMenu_Image" type="TextureRect" parent="GameMenu_Control"]
-margin_right = 1024.0
-margin_bottom = 720.0
-rect_min_size = Vector2( 1024, 720 )
-texture = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu_Control/GameMenu_Image"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu_Control"]
 margin_left = 20.0
 margin_right = 320.0
 margin_bottom = 420.0
@@ -254,87 +245,87 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu_Control/GameMenu_Image/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu_Control/HBoxContainer"]
 margin_right = 300.0
 margin_bottom = 444.0
 rect_min_size = Vector2( 300, 420 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_right = 300.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 300, 100 )
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 5 )
 visible_characters = 10
 meta_underlined = false
 tab_size = 10
 text = " TIMER"
 scroll_active = false
 
-[node name="Minutes_5_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="Minutes_5_Button" type="Button" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_top = 104.0
 margin_right = 300.0
 margin_bottom = 143.0
 rect_min_size = Vector2( 300, 25 )
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 7 )
 action_mode = 0
 text = "5 Minutes"
 script = ExtResource( 9 )
 
-[node name="Minutes_10_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="Minutes_10_Button" type="Button" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_top = 147.0
 margin_right = 300.0
 margin_bottom = 186.0
 rect_min_size = Vector2( 300, 20 )
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 9 )
 text = "10 Minutes"
 script = ExtResource( 9 )
 
-[node name="Minutes_15_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="Minutes_15_Button" type="Button" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_top = 190.0
 margin_right = 300.0
 margin_bottom = 229.0
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 11 )
 text = "15 Minutes"
 script = ExtResource( 9 )
 
-[node name="Minutes_20_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="Minutes_20_Button" type="Button" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_top = 233.0
 margin_right = 300.0
 margin_bottom = 272.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 13 )
 text = "20 Minutes"
 script = ExtResource( 9 )
 
-[node name="Minutes_30_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="Minutes_30_Button" type="Button" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_top = 276.0
 margin_right = 300.0
 margin_bottom = 315.0
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 15 )
 text = "30 Minutes"
 script = ExtResource( 9 )
 
-[node name="Minutes_45_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="Minutes_45_Button" type="Button" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_top = 319.0
 margin_right = 300.0
 margin_bottom = 358.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 17 )
 text = "45 Minutes"
 script = ExtResource( 9 )
 
-[node name="Minutes_60_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="Minutes_60_Button" type="Button" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_top = 362.0
 margin_right = 300.0
 margin_bottom = 401.0
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 19 )
 text = "60 Minutes"
 script = ExtResource( 9 )
 
-[node name="Quit_Button" type="Button" parent="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer"]
+[node name="Quit_Button" type="Button" parent="GameMenu_Control/HBoxContainer/VBoxContainer"]
 margin_top = 405.0
 margin_right = 300.0
 margin_bottom = 444.0
-rect_min_size = Vector2( 0, 39 )
-custom_fonts/font = SubResource( 26 )
+rect_min_size = Vector2( 300, 25 )
+custom_fonts/font = SubResource( 21 )
 text = "Quit"
 script = ExtResource( 9 )
 
@@ -342,12 +333,12 @@ script = ExtResource( 9 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 10 )
-[connection signal="pressed" from="TimerFrame_Image/SettingsButton" to="TimerFrame_Image/SettingsButton" method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_5_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_5_Button" method="_on_Minutes_5_Button_pressed"]
-[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_10_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_10_Button" method="_on_Minutes_10_Button_pressed"]
-[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_15_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_15_Button" method="_on_Minutes_15_Button_pressed"]
-[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_20_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_20_Button" method="_on_Minutes_20_Button_pressed"]
-[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_30_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_30_Button" method="_on_Minutes_30_Button_pressed"]
-[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_45_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_45_Button" method="_on_Minutes_45_Button_pressed"]
-[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_60_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Minutes_60_Button" method="_on_Minutes_60_Button_pressed"]
-[connection signal="pressed" from="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Quit_Button" to="GameMenu_Control/GameMenu_Image/HBoxContainer/VBoxContainer/Quit_Button" method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Timer_Control/TimerFrame_Image/SettingsButton" to="Timer_Control/TimerFrame_Image/SettingsButton" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_5_Button" to="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_5_Button" method="_on_Minutes_5_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_10_Button" to="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_10_Button" method="_on_Minutes_10_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_15_Button" to="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_15_Button" method="_on_Minutes_15_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_20_Button" to="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_20_Button" method="_on_Minutes_20_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_30_Button" to="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_30_Button" method="_on_Minutes_30_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_45_Button" to="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_45_Button" method="_on_Minutes_45_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_60_Button" to="GameMenu_Control/HBoxContainer/VBoxContainer/Minutes_60_Button" method="_on_Minutes_60_Button_pressed"]
+[connection signal="pressed" from="GameMenu_Control/HBoxContainer/VBoxContainer/Quit_Button" to="GameMenu_Control/HBoxContainer/VBoxContainer/Quit_Button" method="_on_QuitButton_pressed"]

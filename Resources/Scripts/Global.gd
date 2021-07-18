@@ -22,11 +22,12 @@ onready var GetViewportNode = get_node("/root/TimerNode/Viewport_Container/Viewp
 
 #TimerNode
 onready var GetGameMenuControl =  get_node("/root/TimerNode/GameMenu_Control");
-onready var GetTimerFrameImage =  get_node("/root/TimerNode/TimerFrame_Image");
+onready var GetTimerControl =  get_node("/root/TimerNode/Timer_Control");
+onready var GetTimerFrameImage =  get_node("/root/TimerNode/Timer_Control/TimerFrame_Image");
 
 #TimerFrame_Image
-onready var GetRTLMINUTES = get_node("/root/TimerNode/TimerFrame_Image/HBoxContainer/RTL_MINUTES");
-onready var GetRTLSECONDS = get_node("/root/TimerNode/TimerFrame_Image/HBoxContainer/RTL_SECONDS");
+onready var GetRTLMINUTES = get_node("/root/TimerNode/Timer_Control/TimerFrame_Image/HBoxContainer/RTL_MINUTES");
+onready var GetRTLSECONDS = get_node("/root/TimerNode/Timer_Control/TimerFrame_Image/HBoxContainer/RTL_SECONDS");
 onready var new_minutes = 0; 
  
 var start_x = 0;
@@ -72,6 +73,7 @@ var Bg_Timer_middlepoint_y = 0;
  
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	print("Global: _ready (start): debug: ", Global.debug);
 	if Global.debug > 0:
 		print("Global: _ready (start): minutes: ", minutes);
@@ -110,8 +112,16 @@ func _ready():
 		print("Global: _ready (start): GameMenu: ", GameMenu); 
 		print("Global: _ready (start): TimerApp: ", TimerApp); 	 
 		print("Global: _ready (start): GetBackgroundLayer1: ", GetBackgroundLayer1); 
+		print("Global: _ready (start): GetBackgroundLayer2: ", GetBackgroundLayer2); 
+		print("Global: _ready (start): GetBackgroundLayer3: ", GetBackgroundLayer3); 
+		print("Global: _ready (start): GetBackgroundLayer4: ", GetBackgroundLayer4); 
+		print("Global: _ready (start): GetBackgroundLayer0_start_y: ", GetBackgroundLayer0_start_y); 
+		print("Global: _ready (start): GetBackgroundLayer1_start_y: ", GetBackgroundLayer1_start_y); 
+		print("Global: _ready (start): GetBackgroundLayer2_start_y: ", GetBackgroundLayer2_start_y); 
+		print("Global: _ready (start): GetBackgroundLayer3_start_y: ", GetBackgroundLayer3_start_y); 
 		print("Global: _ready (start): GetViewportNode: ", GetViewportNode); 	 
 		print("Global: _ready (start): GetGameMenuControl: ", GetGameMenuControl); 
+		print("Global: _ready (start): GetTimerControl: ", GetTimerControl); 
 		print("Global: _ready (start): GetTimerFrameImage: ", GetTimerFrameImage); 	 
 		print("Global: _ready (start): GetRTLMINUTES: ", GetRTLMINUTES); 
 		print("Global: _ready (start): GetRTLSECONDS: ", GetRTLSECONDS); 
@@ -119,7 +129,7 @@ func _ready():
 		print("Global: _ready (start): start_x: ", start_x); 
 		print("Global: _ready (start): start_y: ", start_y); 
 		print("Global: _ready (start): Positional_Vector: ", Positional_Vector); 
-		#print("Global: _ready (start): animation_speed: ", animation_speed); 
-		#print("Global: _ready (start): end_buffer: ", end_buffer);  
+		print("Global: _ready (start): animation_speed: ", animation_speed); 
+		print("Global: _ready (start): end_buffer: ", end_buffer);  
 	pass # Replace with function body.
 

@@ -6,39 +6,34 @@ onready var AlarmBell = preload("res://Resources/audio/alarm-bell.wav");
 onready var Player = get_node("/root/TimerNode/AudioStreamPlayer2D");
 ################# Position Data Collection Variables ##############
  
-func _ready(): 
+func _ready():  
+	TimerApp.make_invisible();
+	GameMenu.make_visible();
 	Global.status = 1; 
-	switch_GameMenu(); 
-	_Start_Timer();
+	#switch_GameMenu(); 
+	#_Start_Timer();
 	pass 
 	
 func _Start_Timer(): 
+	GameMenu.make_invisible();
+	TimerApp.make_visible();
 	get_viewport_data(); 
 	#get_bg_image_data();
-	reposition_the_background();
-	timer_background();
+	#reposition_the_background(); 
 	var temp = (Global.minutes*60) + Global.end_buffer;
 	Global.animation_speed = (Global.BG_Image_size_y - Global.viewport_size_y) / temp; 
 	pass;
-	
-func timer_background():
-	get_timer_bg_image_data();
-	Global.Bg_Timer_start_x = 0;
-	Global.Bg_Timer_start_y = 0;
-	Global.GetTimerFrameImage.set_position((Vector2(Global.Bg_Timer_start_x, Global.Bg_Timer_start_y)));  
-	get_timer_bg_image_data();
-	pass;	 
-	
-func reposition_the_background():  
-	pass;
+	  
 
 func switch_GameMenu():  
 	if Global.status == 1 : 
 		GameMenu.make_visible();
 		Global.minutes = 0;
 		Global.seconds = 0;
+		TimerApp.make_invisible();
 	else:  
 		GameMenu.make_invisible();
+		TimerApp.make_visible();
 	pass;  
 
 func get_viewport_data():   
@@ -101,6 +96,7 @@ func update_timer():
 				#get_tree().quit();
 				Global.status = 1;
 				Global.timesup = 0;
+				make_invisible();
 				switch_GameMenu();  
 	pass;
 	 
@@ -127,3 +123,30 @@ func _input(event):
 func play_alarm_bell(): 
 	Player.stream = AlarmBell;
 	Player.play()			
+
+func make_visible(): 
+	self.show();  
+	Global.GetTimerControl.show();	
+	var check = self.check_visiblity(); 	
+	if Global.debug > 0:
+		print ("Timer (self): ", self) 
+		print ("Timer (Global): ", Global.GetTimerControl )  
+		print ("make_visible check (self): ", check) 
+	pass 
+	
+func make_invisible():  
+	self.hide();	 
+	Global.GetTimerControl.hide();	
+	var check = self.check_visiblity(); 
+	if Global.debug > 0:
+		print ("Timer (self): ", self) 
+		print ("Timer (Global): ", Global.GetTimerControl ) 
+		print ("make_invisible check (self): ", check) 
+	pass  
+	
+func check_visiblity():
+	if self.visible:
+		return(1)
+	else:
+		return(0)
+	pass;
