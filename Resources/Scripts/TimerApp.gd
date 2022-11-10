@@ -121,7 +121,7 @@ func _input(event):
 			switch_GameMenu();
 
 func play_alarm_bell(): 
-	Player.stream = AlarmBell;
+	#Player.stream = AlarmBell;
 	Player.play()			
 
 func make_visible(): 
